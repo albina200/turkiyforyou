@@ -1,0 +1,644 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: #231F20;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+nav{
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.562);
+    /* height: 70px; */
+    /* max-height: 70px; */
+    padding: 20px 0;
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    border-radius: 0 0 10px 10px;
+}
+.nav__elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__elements .logo img{
+    width: 120px;
+}
+
+.nav__links{
+    width: 400px;
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+.nav__links a{
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    transition: 0.5s; 
+}
+.nav__links a:hover{
+    color: #ff7b00;
+}
+.nav__social{
+    display: flex;
+    gap: 20px;
+}
+.nav__social a{
+    font-size: 22px;
+    line-height: 30px;
+    color: white;
+    transition: 0.5s; 
+}
+.nav__social a:hover{
+    color: #ff7b00;
+}
+
+.hamburger{
+    width: 40px;
+    height: 20px;
+    position: relative;
+    background-color: transparent;
+    display: none;
+}
+.hamburger span{
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    transition: 0.5s;
+}
+.hamburger span:nth-child(1){
+    position: absolute;
+    top: 0;
+}
+.hamburger span:nth-child(2){
+    position: absolute;
+    top: 9px;
+}
+.hamburger span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+}
+.hamburger_active span:nth-child(1){
+    top: 9px;
+    transform: rotate(45deg);
+    background-color: #ff7b00;
+}
+.hamburger_active span:nth-child(2){
+    opacity: 0;
+}
+.hamburger_active span:nth-child(3){
+    bottom: 9px;
+    transform: rotate(-45deg);
+    background-color: #ff7b00;
+}
+
+section{
+    padding: 40px 0;
+}
+
+header{
+    height: 100vh;
+    min-height: 540px;
+    position: relative;
+    box-shadow: 0 0 70px black;
+}
+header .container{
+    height: 100vh;
+    min-height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+.header__elements{
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+}
+.header__elements h1{
+    font-size: 55px;
+    line-height: 65px;
+    margin: 0 0 20px 0;
+}
+hr{
+    width: 80%;
+    height: 2px;
+    background-color: #ff7b00;
+    margin-bottom: 20px;
+}
+.header__elements h5{
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+.header__button{
+    margin: 30px 0 0 0;
+}
+
+.header__button:hover{
+    transform: scale(105%);
+}
+
+.header__slider{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header__slider .swiper-slide:nth-child(1){
+    background-image: url(../img/каппадокифон.png);
+}
+.header__slider .swiper-slide:nth-child(2){
+    background-image: url(../img/тазыканьонфон.png);
+}
+.header__slider .swiper-slide:nth-child(3){
+    background-image: url(../img/3.png);
+}
+.header__slider .swiper-slide:nth-child(4){
+    background-image: url(../img/4.png);
+}
+
+
+
+.about{
+    padding: 70px 0;
+    background-color: #231F20;
+    color: #FFFFFF;
+}
+.about__elements{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    /* gap: 20px; */
+}
+.about__elements span{
+    color: #ff7b00;
+}
+h2{
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.about__elements h3{
+    font-size: 25px;
+    line-height: 30px;
+}
+.about__elements p{
+    /* margin: 20px 0; */
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+.about__elements p a{
+    color: #ff7b00;
+    text-decoration: underline;
+}
+.about__elements p a:hover{
+    text-decoration: none; 
+}
+.reviews{
+    background-color: #FFFFFF;
+}
+.reviews span{
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.reviews__slider{
+    width: 70%;
+    min-width: 280px;
+}
+.reviews__slider .swiper-slide{
+    width: 100%;
+    border: 1px solid #ff7b00;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+.reviews__slider .swiper-slide p{
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+.reviews__slider .swiper-slide h3{
+    text-align: right;
+    font-size: 17px;
+    color: #ff7b00;
+    font-weight: 700;
+}
+.swiper-button-prev, .swiper-button-next{
+    color: #ff7b00;
+}
+.swiper-button-prev{
+    left: -80px;
+}
+.swiper-button-next{
+    right: -80px;
+}
+
+.transfer{
+    background-color: #231F20;
+    color: #FFFFFF;
+}
+.transfer .container{
+    padding: 0;
+    background-image: url(../img/машина2.png);
+    background-repeat: no-repeat;
+    background-size: 72%;
+    background-position: center;
+}
+.transfer__slider{
+    width: 100vw;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.transfer .swiper-wrapper{
+    align-items: stretch;
+    padding: 20px;
+}
+.transfer__slider .swiper-slide{
+    padding: 10px;
+    background-color: #231F20;
+    box-shadow: 0 0 20px black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    text-align: center;
+}
+.transfer__slider .swiper-slide h2{
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1x;
+    margin: 0 0 16px 0;
+    color: #ff7b00;
+    width: 100%;
+}
+.transfer__slider .swiper-slide p{
+    /* margin: 0 0 15px 0; */
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.transfer a{
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+.turs{
+    background-color: #231F20;
+    padding: 60px 0;
+}
+.turs .container{
+    padding: 0;
+}
+.turs h2{
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.turs__slider{
+    /* min-width: 100%; */
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 20px;
+}
+.turs__slider .swiper-wrapper{
+    min-width: 100%;
+}
+.turs__slider .swiper-slide{
+    background-color: #231F20;
+    border-radius: 20px;
+    /* padding: 10px; */
+    margin: 20px 0;
+    box-shadow: 0 0 15px black;
+    position: relative;
+}
+.turs__slider .swiper-slide img{
+    border-radius: 20px;  
+}
+
+.turs__slider .swiper-slide a{
+    font-size: 17px;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-align: center;
+    text-align: left;
+    background-color: #231f2096;
+    padding: 8px;
+    transition: 0.5s;
+    border-radius: 0 0 20px 20px;
+    text-transform: uppercase;
+    width: 100%;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.turs__slider .swiper-slide a:hover{
+    color: #ff7b00;
+}
+
+.button-order{
+    padding: 20px 40px;
+    font-size: 17px;
+    line-height: 25px;
+    display: inline-block;
+    color: #FFFFFF;
+    border: 1px solid #ff5e00d3;
+    transition: 0.5s;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: #ff5e00d3;
+}
+
+.header_fire-himera__elements{
+    background-image: url(../img/Frameогнихимера.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.about__turs{
+    background-image: url(../img/77.png);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.about__turs h2{
+    color: #FFFFFF;
+}
+.about__turs p{
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+.about__turs__p_center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.about__turs__p_center p{
+    width: 43%;
+    flex-grow: 1;
+}
+.about__turs__p_center img{
+    border-radius: 50px;
+    max-width: 400px;
+    width: 100%;
+}
+.turs__end{
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    text-align: center;
+}
+.turs__end a{
+    padding: 20px 40px;
+    font-size: 17px;
+    line-height: 25px;
+    display: inline-block;
+    color: #FFFFFF;
+    border: 1px solid #ff5e00d3;
+    transition: 0.5s;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: #ff5e00d3;
+    margin-top: 40px;
+}
+.turs__end a:hover{
+    transform: scale(105%);
+}
+
+
+.header_likiyskie-grobnica__elements{
+    background-image: url(../img/Frameликийскиегробницы.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_The-Land-Of-Legends__elements{
+    background-image: url(../img/FrameThe\ Land\ Of\ Legends.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_peshera-altinbeshik__elements{
+    background-image: url(../img/Frameпещераалтынбешик21.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_drevniy-gorod-perge__elements{
+    background-image: url(../img/древнийгородпергефон.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_peshera-dim__elements{
+    background-image: url(../img/пещерадим.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   
+}
+
+.header_drevniy-gorod-efes__elements{
+    background-image: url(../img/Frameдревнийгородэфесфон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_ozero-salda__elements{
+    background-image: url(../img/Frameозеросалдафон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_ostrov-suluada__elements{
+    background-image: url(../img/островсулуадавон.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_plaj-patara__elements{
+    background-image: url(../img/пляжпатарафон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_vorota-adriana__elements{
+    background-image: url(../img/воротаадрианафоннн.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_lavandovie-polya__elements{
+    background-image: url(../img/лавандовыеполяфон.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_oludeniz__elements{
+    background-image: url(../img/олюденизфон.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_pamukale__elements{
+    background-image: url(../img/паммукалефон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_rosovie-polya-v-isparte__elements{
+    background-image: url(../img/розовыеполяфон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_verhniy-duden__elements{
+    background-image: url(../img/верхнийдюденфон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_nizhniy-duden__elements{
+    background-image: url(../img/Нижний-Дюденский-водопадфон.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_aspendos__elements{
+    background-image: url(../img/аспендосфон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.header_stariy-gorod-kaliechi__elements{
+    background-image: url(../img/аспендосфон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_stariy-gorod-kaliechi__elements{
+    background-image: url(../img/старыйгородкалесифон.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_likiyskaya-tropa__elements{
+    background-image: url(../img/ликийскаятропафон.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_park-skazok__elements{
+    background-image: url(../img/парксказокфон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_kappadokiya__elements{
+    background-image: url(../img/каппадокифон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header_kappadokiya__elements{
+    background-image: url(../img/тазыканьонфон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_peshera-damlatash__elements{
+    background-image: url(../img/пещерадамлаташфон.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_zoopark-v-antalyi__elements{
+    background-image: url(../img/зоопаркваналиифон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_park-miniatyur__elements{
+    background-image: url(../img/Паркминиатюр«мини-сити»фон2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header_drevniy-gorod-troya__elements{
+    background-image: url(../img/древнийгородтрояфон.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
